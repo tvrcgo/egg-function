@@ -1,0 +1,27 @@
+{
+  "name": "egg-function",
+  "version": "0.1.0",
+  "description": "function framework based on eggjs",
+  "scripts": {
+    "test": "egg-bin test"
+  },
+  "files": [
+    "app",
+    "config",
+    "lib",
+    "app.js",
+    "index.js"
+  ],
+  "keywords": [],
+  "dependencies": {
+    "egg": "^2.26.0",
+    "egg-mysql": "^3.0.0",
+    "egg-oss": "^2.0.0",
+    "egg-sls": "^1.0.0-alpha.2"
+  },
+  "devDependencies": {
+    "egg-bin": "^4.14.1"
+  },
+  "author": "tvrcgo <tvrcgo@gmail.com>",
+  "license": "ISC"
+}
