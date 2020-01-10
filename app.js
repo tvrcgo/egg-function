@@ -17,17 +17,6 @@ class AppBootHook {
     this.app.loader.loadToApp(functions, 'function')
   }
 
-  async willReady() {
-
-  }
-
-  async didReady() {
-
-  }
-
-  async serverDidReady() {
-
-  }
 }
 
 module.exports = AppBootHook
