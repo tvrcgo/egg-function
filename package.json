@@ -1,5 +1,5 @@
 {
-  "name": "egg-function",
+  "name": "@tvrcgo/egg-function",
   "version": "0.1.0",
   "description": "function framework based on eggjs",
   "scripts": {
