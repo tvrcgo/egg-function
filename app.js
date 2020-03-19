@@ -8,7 +8,7 @@ class AppBootHook {
 
   configWillLoad() {
     // 添加中间件
-    this.app.config.coreMiddleware.unshift('call')
+    this.app.config.coreMiddleware.push('call')
   }
 
   async didLoad() {
