@@ -2,8 +2,8 @@
 module.exports = (opts, app) => {
   return async (ctx, next) => {
     const { path } = ctx.request
-    if (/^\/call\/([\w-./]+)/.test(path)) {
-      const route = path.replace(/^\/call\//g, '')
+    if (/^\/(call|f)\/([\w-./]+)/.test(path)) {
+      const route = path.replace(/^\/(call|f)\//g, '')
       if (route) {
         const fn = ctx.fn(route)
         if (fn && typeof fn === 'function') {
