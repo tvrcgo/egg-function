@@ -16,3 +16,8 @@ exports.mysql = {
   enable: false,
   package: 'egg-mysql'
 }
+
+exports.validate = {
+  enable: true,
+  package: 'egg-validate'
+}
