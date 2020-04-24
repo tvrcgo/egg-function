@@ -6,7 +6,7 @@ class AppBootHook {
     this.app = app
   }
 
-  configWillLoad() {
+  configDidLoad() {
     // 添加中间件
     this.app.config.coreMiddleware.push('call')
   }
