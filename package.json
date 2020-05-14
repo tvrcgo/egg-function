@@ -17,6 +17,7 @@
     "egg": "^2.26.0",
     "egg-mysql": "^3.0.0",
     "egg-oss": "^2.0.0",
+    "egg-redis": "^2.4.0",
     "egg-sls": "^1.0.0-alpha.2",
     "egg-validate": "^2.0.2"
   },
