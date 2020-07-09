@@ -22,7 +22,8 @@
     "egg-validate": "^2.0.2"
   },
   "devDependencies": {
-    "egg-bin": "^4.14.1"
+    "egg-bin": "^4.14.1",
+    "egg-mock": "^4.0.0"
   },
   "author": "tvrcgo <tvrcgo@gmail.com>",
   "license": "ISC"
