@@ -2,8 +2,11 @@
 module.exports = (opts, app) => {
   return async (ctx, next) => {
     const { path } = ctx.request
-    if (/^\/(call|f)\/([\w-./]+)/.test(path)) {
-      const route = path.replace(/^\/(call|f)\//g, '')
+    const { prefix } = app.config.function
+    const regxUrl = new RegExp('^\\/(' + prefix + ')\\/[\\w-./]+')
+    const regxPrefix = new RegExp('^\\/(' + prefix + ')\\/')
+    if (regxUrl.test(path)) {
+      const route = path.replace(regxPrefix, '')
       if (route) {
         const fn = ctx.fn(route)
         if (fn && typeof fn === 'function') {

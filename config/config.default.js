@@ -28,7 +28,8 @@ module.exports = appInfo => {
 
   // 函数
   config.function = {
-    root: 'app/function'
+    root: 'app/function',
+    prefix: 'f|call'
   }
 
   return config
