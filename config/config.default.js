@@ -26,5 +26,10 @@ module.exports = appInfo => {
     ]
   }
 
+  // 函数
+  config.function = {
+    root: 'app/function'
+  }
+
   return config
 }

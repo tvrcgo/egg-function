@@ -13,7 +13,7 @@ class AppBootHook {
 
   async didLoad() {
     // 加载函数
-    const functions = resolve(this.app.config.baseDir, 'app/function')
+    const functions = resolve(this.app.config.baseDir, this.app.config.function.root)
     this.app.loader.loadToApp(functions, 'function')
   }
 
