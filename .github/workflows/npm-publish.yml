@@ -1,8 +1,9 @@
 name: Publish package
 
 on:
-  release:
-    types: [created]
+  push:
+    tags:
+      - v*
 
 jobs:
   publish:
@@ -14,7 +15,8 @@ jobs:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
           scope: '@tvrcgo'
-      - run: |
+      - name: Publish npm
+        run: |
           npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
