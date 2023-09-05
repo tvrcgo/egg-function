@@ -4,7 +4,11 @@ module.exports = {
     return name
       .replace(/(^\/+|\/+$)/g, '')
       .split('/')
-      .reduce((f, k) => f = f[k] || {}, this.app.function)
+      .reduce((f, k) => {
+        const camelKey = k.replace(/_(\w)/g, (match, letter) => letter.toUpperCase())
+        f = f[k] || f[camelKey] || {}
+        return f
+      }, this.app.function)
   },
 
   async call(name, body = {}) {
